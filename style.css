@@ -1,0 +1,283 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:url(img/background.jpg) ;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*HEADER - NAV*/
+
+header{
+    backdrop-filter: blur(20px);
+    padding: 0px 2rem;
+
+}
+
+header .navbar{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .navbar a{
+    color: #a2a2a2;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header .navbar .nav-links a:hover{
+    color: #fff;
+    text-shadow: 0px 5px 15px #fff;
+    transition: .4s;
+}
+
+header .navbar .logo a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 0px 25px #fff;
+}
+
+header .navbar .getstarted a{
+    border: none;
+    outline: none;
+    background-color: rgb(142, 1, 1);
+    border-radius: 20px;
+    color: #fff;
+}
+header .navbar .getstarted a:hover{
+    background-color: rgb(159, 0, 0);
+    text-shadow: 0px 5px 15px #fff;
+    transition: .4s;
+}
+
+header .navbar .tooglebtn{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+header .navbar .tooglebtn:hover{
+    text-shadow: 0px 0px 10px #fff;
+    transition: .4s;
+}
+
+
+
+/*DROPDOWN MENU*/
+header .navbar .dropdown-menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(107, 0, 0);
+    box-shadow: 0px 0px 20px rgb(145, 0, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    display: none;
+    z-index: 1;
+}
+header .navbar .dropdown-menu .dropdown-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+header .navbar .dropdown-menu .dropdown-links a{
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+header .navbar .dropdown-menu .dropdown-links a:hover{
+    color: #fff;
+    text-shadow: 0px 5px 15px #fff;
+    transition: .4s;
+    border-radius: 20px;
+}
+header .navbar .dropdown-menu .dropdown-links .getstartedDrop{
+    background-color: rgb(142, 1, 1);
+    border-radius: 20px;
+    width: 50%;
+    margin-bottom: 10px;
+    color: #fff;
+}
+header .navbar .dropdown-menu .dropdown-links .getstartedDrop:hover{
+    background-color: rgb(159, 0, 0);
+    text-shadow: 0px 5px 15px #fff;
+    transition: .4s;
+}
+
+
+
+
+
+/*CONTENT*/
+
+.container{
+    position: relative;
+    height: 500px;
+    width: 70%;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 0;
+}
+.container .content{
+
+    display: flex;
+    height: auto;
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgb(48, 0, 0);
+    min-width: 850px;
+    max-width: 1200px;
+
+}
+.container .content .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+}
+.container .content .card h1{
+    text-shadow: 0px 0px 10px #fff;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.container .content .card p{
+    text-align: center;
+}
+.container .content form{
+    background-color: rgb(145, 3, 3,.3);
+    border-radius: 50px;
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 75%;
+    min-width: 380px;
+    max-width: 300px;
+    max-height: 360px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.container .content form .inputbox{
+    position: relative;
+}
+.container .content form .inputbox i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container .content form h3{
+    margin: 20px;
+    font-size: 30px;
+}
+.container .content form table td{
+    padding: 5px;
+}
+.container .content form input{
+    background: transparent;
+    border: 2px solid rgb(138, 0, 0);
+    outline: none;
+    height: 30px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+}
+
+.container .content form table td input[type="button"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(161, 0, 0);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+}
+.container .content form table td input[type="button"]:hover{
+    background-color: rgb(189, 0, 0);
+    transition: .3s ease-in-out;
+}
+
+.container .content form input::placeholder{
+    color: #a5a5a5;
+}
+
+.container .content form p{
+    margin-top: 20px;
+}
+
+.container .content form p a{
+    color: rgb(199, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container .content form p a:hover{
+    text-shadow: 0px 0px 15px #be0000;
+    transition: .3s;
+    color: red;
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width:800px) {
+    header .navbar .nav-links,
+    header .navbar .getstarted{
+        display: none;
+    }
+    header .navbar .tooglebtn{
+        display: block;
+    }
+}
+@media screen and (max-width:900px){
+    .container{
+        margin-top: 160px;
+    }
+    .container .content{
+        flex-direction: column;
+        min-width: 450px;
+    }
+    .container .content .card{
+        margin-bottom: 10px;
+    }
+    .container .content form{
+        margin-top: 0px;
+    }
+}
+

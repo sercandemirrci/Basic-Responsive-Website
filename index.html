@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">The Witcher Guide</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Guides</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="getstarted">
+                <a href="#">Get Started</a>
+            </div>
+            <div class="tooglebtn" onclick="dropdownDisplay()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu" id="dropdownId">
+                <div class="dropdown-links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Guides</a>
+                    <a href="#">Contact</a>
+                    <a href="#" class="getstartedDrop">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="container">
+        <div class="content">
+            <div class="card">
+                <h1>The Witcher Guide</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, ex quos recusandae eos ut at!
+                    Rerum obcaecati itaque, nisi hic voluptatem, optio cupiditate nulla voluptate eius quia maiores
+                    eaque voluptatibus</p>
+            </div>
+            <form>
+                <table>
+                    <h3>Login</h3>
+                    <tr>
+                        <td>
+                            <div class="inputbox"><input type="text" placeholder="Username" required><i
+                                    class="fa-solid fa-user"></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inputbox"><input type="password" placeholder="Password" required><i
+                                    class="fa-solid fa-lock"></i>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Login"></td>
+                    </tr>
+                </table>
+                <p>Don't Have an Account? <a href="#">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function dropdownDisplay() {
+            var x = document.getElementById("dropdownId");
+            var y = document.getElementById("container");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.zIndex = -1;
+            } else {
+                x.style.display = "none";
+                y.style.zIndex = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
